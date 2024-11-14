@@ -1,10 +1,8 @@
 # Fourier Transform
----
 
 > A Rust implmentation & interpretation.
 
 ## What is Fourier Transform?
----
 
 A Fourier transformation is a mathematical function that can separate an input wave function into its constituent parts by performing different operations on different waveforms that combine to make the fundamental waveform.
 
@@ -22,7 +20,6 @@ F_s1 + F_s2 = 'F_s1 + 'F_s2
 ```
 
 ## Formula Break-down
----
 
 ```
 F(ω) = ∫ f(t) * e^(-iωt) dt ; (-∞ to ∞)
@@ -103,7 +100,6 @@ e^(-iωt) = cos(-ωt) + i sin(-ωt)
   - Graphically, phase shift adjusts the wave's start point along the x-axis.
 
 ## Why Angular Frequency is Preferred in DSP
----
 
 1. **Radians Compatibility**:
 
@@ -125,7 +121,6 @@ e^(-iωt) = cos(-ωt) + i sin(-ωt)
 
 
 ## Coding the Fourier Transform
----
 
 To program a version of the formula that can be utilized for digitally stored signals, we will use the discrete approximation called the Discrete Fourier Transform (DFT). 
 
