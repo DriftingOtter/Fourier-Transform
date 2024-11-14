@@ -2,7 +2,6 @@ use std::f64::consts::PI;
 use num_complex::Complex;
 use plotly::common::Mode;
 use plotly::{Plot, Scatter};
-use std::env;
 
 const DOMAIN_START: isize = -50;
 const DOMAIN_END: isize   = 50;
@@ -12,11 +11,7 @@ const X_SHIFT: f64 = 0.0;
 const Y_SHIFT: f64 = 0.0;
 
 fn main() {
-    let _args = match get_command_line_args() {
-        Ok(x) => x,
-        Err(_) => ("".to_string(), "".to_string()),
-    };
-
+    // Note: C
     let signal_a = match gen_sine_signal((DOMAIN_START, DOMAIN_END), AMPLITUDE, 261.63, X_SHIFT, Y_SHIFT) {
         Some(x) => x,
         None => {
@@ -25,6 +20,7 @@ fn main() {
         },
     };
 
+    // Note: E
     let signal_b = match gen_sine_signal((DOMAIN_START, DOMAIN_END), AMPLITUDE, 329.63, X_SHIFT, Y_SHIFT) {
         Some(x) => x,
         None => {
@@ -33,6 +29,7 @@ fn main() {
         },
     };
 
+    // Note: G
     let signal_c = match gen_sine_signal((DOMAIN_START, DOMAIN_END), AMPLITUDE, 392.00, X_SHIFT, Y_SHIFT) {
         Some(x) => x,
         None => {
@@ -40,7 +37,6 @@ fn main() {
             return;
         },
     };
-
 
     let input_signal: Vec<(isize, f64)> = (DOMAIN_START..=DOMAIN_END)
         .map(|j| {
@@ -70,16 +66,6 @@ fn plot_signal(title: &str, signal: &[(isize, f64)]) {
     let mut plot = Plot::new();
     plot.add_trace(trace);
     plot.show();
-}
-
-fn get_command_line_args() -> Result<(String, String), ()> {
-    let args: Vec<String> = env::args().collect();
-
-    if args.len() != 3 {
-        eprintln!("Incorrect number of command-line arguments. Usage: Fourier_Transform <Signal_Array> <Output_Image_Path>");
-        return Err(());
-    }
-    return Ok((args[1].clone(), args[2].clone()));
 }
 
 fn gen_sine_signal(domain: (isize, isize), amplitude: f64, frequency: f64, x_shift: f64, y_shift: f64) -> Option<Vec<(isize, f64)>> {

@@ -8,11 +8,9 @@ readme  = "README.md"
 
 description = "An implementation of Discrete Fourier Transform."
 
-
 [dependencies]
 num-complex = "0.4.6"
 plotly = "0.10.0"
-textplots = "0.8.6"
 
 [package.metadata.docs.rs]
 features = ["default"]
