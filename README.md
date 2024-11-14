@@ -107,17 +107,17 @@ e^(-iωt) = cos(-ωt) + i sin(-ωt)
 
 1. **Radians Compatibility**:
 
-   - ω = 2 * PI * f aligns naturally with radians, simplifying trigonometric functions (sine/cosine) and avoiding extra conversions.
+   - ```ω = 2 * PI * f``` aligns naturally with radians, simplifying trigonometric functions (sine/cosine) and avoiding extra conversions.
    
 2. **Fourier Transform and Complex Exponentials**:
 
-   - Fourier transform decomposes signals into components like e^i * ω * t, where ω in radians per second integrates seamlessly with DSP mathematics.
+   - Fourier transform decomposes signals into components like ```e^i * ω * t```, where ω in radians per second integrates seamlessly with DSP mathematics.
    
 3. **Discrete Sampling**:
 
    - For sampled signals, angular frequency provides a phase change per sample, fitting digital signal processing's sample-based approach.
 
-   - Normalized angular frequency helps DSP work within a manageable range (0, PI) for periodicity and symmetry.
+   - Normalized angular frequency helps DSP work within a manageable range ```[0, PI]``` for periodicity and symmetry.
 
 4. **Filter Design**:
 
