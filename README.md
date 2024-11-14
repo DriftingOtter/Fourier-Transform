@@ -24,18 +24,20 @@ F_s1 + F_s2 = 'F_s1 + 'F_s2
 ## Formula Break-down
 ---
 
+```
 F(ω) = ∫ f(t) * e^(-iωt) dt ; (-∞ to ∞)
+```
 
 - where:
     
     + ω is the angular frequency (often 2πf where f is frequency),
     
-    + e^(-iωt) or (cos(ωt) - i sin(ωt)) represents oscillations that match the frequencies in f(t).
+    + ```e^(-iωt)``` or ```(cos(ωt) - i sin(ωt))``` represents oscillations that match the frequencies in f(t).
 
 ### Converting e^(-iωt) from Euler's Form to Polar Form
 ---
 
-To convert e^(-iωt) from Euler's form to polar form, we use Euler's formula:
+To convert ```e^(-iωt)``` from Euler's form to polar form, we use Euler's formula:
 
 ```
     e^(iθ) = cos(θ) + i sin(θ)
@@ -56,40 +58,40 @@ e^(-iωt) = cos(-ωt) + i sin(-ωt)
 - **Definition**: Linear frequency f (measured in Hertz) is the number of cycles a wave completes per second.
 
 - **Period**:
-  - The period T, the time for one cycle, is given by T = 1 / F.
+  - The period T, the time for one cycle, is given by ```T = 1 / F```.
 
   - Higher frequency results in a shorter period, meaning more cycles per second.
 
 - **Example**:
-  - For f = 2Hz, the period T = 1/2 = 0.5 seconds.
+  - For ```f = 2Hz```, the period ```T = 1/2 = 0.5 seconds```.
 
 ##### 2. **Angular Frequency (ω)**
 ---
 
 - **Definition**: Angular frequency ω measures the rate of phase change over time in radians per second.
 
-- **Conversion**: Angular frequency relates to linear frequency by ω = 2 * PI * f.
+- **Conversion**: Angular frequency relates to linear frequency by ```ω = 2 * PI * f```.
 
 - **Period (in terms of ω)**:
-  - Period T = 2 PI / ω, so higher angular frequency leads to a shorter period, increasing oscillations.
+  - Period ```T = 2 PI / ω```, so higher angular frequency leads to a shorter period, increasing oscillations.
   
 #### 3. **Impact on the Sine Wave's Domain and Period**
 ---
 
-- **Linear Frequency (f)**: The formula y = sin(2 * PI * f * x) uses (2 * PI * f) to convert cycles into radians.
+- **Linear Frequency (f)**: The formula ```y = sin(2 * PI * f * x)``` uses ```(2 * PI * f)``` to convert cycles into radians.
 
   - Increasing f compresses the wave horizontally, adding more oscillations within the same domain.
   
-- **Angular Frequency (ω)**: The formula y = sin(ω * f) directly scales the wave's period.
+- **Angular Frequency (ω)**: The formula ```y = sin(ω * f)``` directly scales the wave's period.
 
-  - Higher ω increases oscillations per unit of __x__, compressing the wave horizontally.
+  - Higher ω increases oscillations per unit of x, compressing the wave horizontally.
 
 #### 4. **Phase Shift (PHI) and Its Effects on Waves**
 ---
 
 - **Definition**: Phase shift is a horizontal displacement, altering where the wave begins without changing its frequency or amplitude.
 
-- **Formula with Phase Shift**: y = sin(2 * PI * f * x + PHI)
+- **Formula with Phase Shift**: ```y = sin(2 * PI * f * x + PHI)```
 
   - **Positive** __PHI__ shifts the wave left.
   - **Negative** __PHI__ shifts the wave right.
