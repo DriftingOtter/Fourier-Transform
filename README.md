@@ -1,4 +1,4 @@
-<img src="assets/graph.png" alt="A graph of a C major triad on a x-frequency graph with a DFT signal decomposition analysis graph underneath it." width="1000" height="500">
+<img src="assets/graph.png" alt="A graph of a C major triad on a x-frequency graph with a DFT signal decomposition analysis graph underneath it.">
 
 # Fourier Transform
 
